@@ -1,0 +1,37 @@
+package day3exerciseswithsir;
+
+	public class Hourly extends EmployeeRecord implements IncreaseSalary {
+		private int salaryPerHour;
+		private int numOfHours;
+		public Hourly(int salary, int numOfHours) {
+			this.salaryPerHour = salary;
+			this.numOfHours = numOfHours;
+		}
+		@Override
+		public int getSalary() {
+			System.out.println("Hourly employee ");		
+			return salaryPerHour * numOfHours;
+		}
+		@Override
+		public int increasedSalary() {
+			return 5;
+		}
+		@Override
+		public double getPayment() {
+			return salaryPerHour * numOfHours;
+		}
+		@Override
+		public String toString() {
+			StringBuilder builder = new StringBuilder();
+			builder.append("HourlyEmployee:");
+			builder.append(salaryPerHour);
+			builder.append(" numOfHours=");
+			builder.append(numOfHours);
+			builder.append(" salary=");
+			builder.append(salaryPerHour*numOfHours);
+			return builder.toString();
+		}
+
+	}
+
+}
