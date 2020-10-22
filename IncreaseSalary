@@ -1,0 +1,6 @@
+package day3exerciseswithsir;
+
+	public interface IncreaseSalary {
+		public int increasedSalary();
+	}
+
